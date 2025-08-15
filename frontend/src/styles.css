@@ -38,6 +38,12 @@ body {
               radial-gradient(900px 300px at 90% 10%, #ffb3c1 0%, rgba(255,255,255,0) 55%);
 }
 
+/* Floating WhatsApp */
+.floating-whatsapp { position: fixed; right: 18px; bottom: 18px; z-index: 60; }
+.floating-whatsapp a { display: inline-flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 14px; background: #25d366; color: #fff; box-shadow: 0 12px 28px rgba(37,211,102,.35); transition: transform .2s ease, box-shadow .2s ease; }
+.floating-whatsapp a:hover { transform: translateY(-2px); box-shadow: 0 16px 34px rgba(37,211,102,.42); }
+.floating-whatsapp a:active { transform: translateY(0); }
+
 /* Loader */
 .loader { position: fixed; inset: 0; background: linear-gradient(180deg, #fff, #fff6f6); display: grid; place-items: center; z-index: 9999; }
 .loader-content { display: flex; flex-direction: column; align-items: center; gap: .5rem; }

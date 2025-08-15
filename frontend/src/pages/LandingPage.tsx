@@ -7,6 +7,7 @@ import Depoimentos from '../components/Depoimentos'
 import Footer from '../components/Footer'
 import Reveal from '../components/Reveal'
 import SectionDivider from '../components/SectionDivider'
+import FloatingWhatsApp from '../components/FloatingWhatsApp'
 
 const LandingPage: React.FC = () => {
   return (
@@ -72,6 +73,7 @@ const LandingPage: React.FC = () => {
         <Depoimentos />
       </main>
       <Footer />
+      <FloatingWhatsApp />
     </div>
   )
 }

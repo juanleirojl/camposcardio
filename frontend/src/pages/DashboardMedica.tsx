@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { format } from 'date-fns'
 import { Link } from 'react-router-dom'
+import FloatingWhatsApp from '../components/FloatingWhatsApp'
 import { Agendamento, listarAgendamentos } from '../services/agendamentos'
 
 const DashboardMedica: React.FC = () => {
@@ -53,6 +54,7 @@ const DashboardMedica: React.FC = () => {
           ))}
         </div>
       </main>
+      <FloatingWhatsApp />
     </div>
   )
 }
