@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Campos Cardiologia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header glass">
+      <div class="container">
+        <a href="#home" class="brand" aria-label="Campos Cardiologia">
+          <span class="brand-icon">
+            <svg viewBox="0 0 64 64" class="brand-heart" aria-hidden="true">
+              <path d="M32 48c-7-6-18-12-18-23a10 10 0 0 1 18-6 10 10 0 0 1 18 6c0 11-11 17-18 23z" fill="#fff"/>
+              <rect x="2" y="2" width="60" height="60" rx="14" fill="#ef4444"></rect>
+              <path d="M32 48c-7-6-18-12-18-23a10 10 0 0 1 18-6 10 10 0 0 1 18 6c0 11-11 17-18 23z" fill="#fff"/>
+              <polyline points="14,30 24,30 27,22 31,40 35,30 44,30 50,26" fill="none" stroke="#ef4444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <div class="brand-text">
+            <div class="brand-title">Campos</div>
+            <div class="brand-sub">Cardiologia</div>
+          </div>
+        </a>
+        <nav class="nav">
+          <a href="#servicos">Serviços</a>
+          <a href="#medicas">Médicas</a>
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#depoimentos">Depoimentos</a>
+          <a href="#agendar" class="btn btn-outline">Agendar agora</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero gradient-hero">
+        <div class="container grid-2">
+          <div>
+            <span class="pill"> <span class="dot"></span> Cuidado cardiológico online e humanizado </span>
+            <h1 class="hero-title">Cuidado <span class="brand">Completo</span> para o seu <span class="brand">Coração</span></h1>
+            <p class="lead">Prevenção e qualidade de vida com atendimento online humanizado. Acompanhamento clínico e cardiológico para toda a família, com foco em hábitos saudáveis, equilíbrio e bem-estar duradouro.</p>
+            <div class="row gap">
+              <a href="#agendar" class="btn btn-primary">Agendar consulta</a>
+              <a href="#como-funciona" class="btn btn-outline">Como funciona</a>
+            </div>
+            <div class="metrics">
+              <div><div class="metric-num">30+</div><div class="metric-label">Anos de experiência</div></div>
+              <div><div class="metric-num">100%</div><div class="metric-label">Online</div></div>
+              <div><div class="metric-num">24/7</div><div class="metric-label">Suporte</div></div>
+            </div>
+          </div>
+          <div class="photos">
+            <div class="photo"><img src="../frontend/src/assets/dr-rosangela.jpg" alt="Drª Rosângela"/></div>
+            <div class="photo"><img src="../frontend/src/assets/dr-antonina.jpg" alt="Drª Antonina"/></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider" aria-hidden>
+        <svg viewBox="0 0 1200 40" preserveAspectRatio="none">
+          <path id="dividerPath" fill="none" stroke="rgba(244,63,94,.28)" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+          <path id="dividerPath2" fill="none" stroke="#fda4af" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+
+      <section id="servicos" class="section">
+        <div class="container">
+          <div class="center mb">
+            <span class="pill"><span class="dot"></span> Serviços</span>
+            <h2 class="title">Especialidades que cuidam do seu coração</h2>
+            <p class="muted max">Abordagem completa com foco em prevenção, bem-estar e acompanhamento contínuo. Escolha a especialidade ideal e agende online.</p>
+          </div>
+          <div class="grid-3">
+            <div class="card">
+              <div class="row gap">
+                <span class="service-icon">🫀</span>
+                <div>
+                  <h3 class="card-title">Cardiologia Geral</h3>
+                  <p class="muted">Consultas e acompanhamento completo de doenças cardiovasculares</p>
+                </div>
+              </div>
+              <div class="list">
+                <div class="item"><span class="check">✔</span> Avaliação cardiovascular completa</div>
+                <div class="item"><span class="check">✔</span> Diagnóstico e tratamento</div>
+                <div class="item"><span class="check">✔</span> Acompanhamento preventivo</div>
+              </div>
+              <div class="end"><a href="#agendar" class="btn btn-primary btn-sm">Agendar</a></div>
+            </div>
+
+            <div class="card">
+              <div class="row gap">
+                <span class="service-icon">🛡️</span>
+                <div>
+                  <h3 class="card-title">Prevenção Cardiovascular</h3>
+                  <p class="muted">Foco na prevenção e detecção precoce de problemas cardíacos</p>
+                </div>
+              </div>
+              <div class="list">
+                <div class="item"><span class="check">✔</span> Check-up preventivo</div>
+                <div class="item"><span class="check">✔</span> Avaliação de fatores de risco</div>
+                <div class="item"><span class="check">✔</span> Orientações lifestyle</div>
+              </div>
+              <div class="end"><a href="#agendar" class="btn btn-primary btn-sm">Agendar</a></div>
+            </div>
+
+            <div class="card">
+              <div class="row gap">
+                <span class="service-icon">👨‍👩‍👧‍👦</span>
+                <div>
+                  <h3 class="card-title">Medicina Familiar</h3>
+                  <p class="muted">Cuidado integral para toda a família, de crianças a idosos</p>
+                </div>
+              </div>
+              <div class="list">
+                <div class="item"><span class="check">✔</span> Atendimento pediátrico</div>
+                <div class="item"><span class="check">✔</span> Cuidado do adulto</div>
+                <div class="item"><span class="check">✔</span> Geriatria preventiva</div>
+              </div>
+              <div class="end"><a href="#agendar" class="btn btn-primary btn-sm">Agendar</a></div>
+            </div>
+
+            <div class="card">
+              <div class="row gap">
+                <span class="service-icon">🍎</span>
+                <div>
+                  <h3 class="card-title">Controle de Peso</h3>
+                  <p class="muted">Programa especializado em emagrecimento e tratamento da obesidade</p>
+                </div>
+              </div>
+              <div class="list">
+                <div class="item"><span class="check">✔</span> Avaliação nutricional</div>
+                <div class="item"><span class="check">✔</span> Plano de emagrecimento</div>
+                <div class="item"><span class="check">✔</span> Acompanhamento contínuo</div>
+              </div>
+              <div class="end"><a href="#agendar" class="btn btn-primary btn-sm">Agendar</a></div>
+            </div>
+
+            <div class="card">
+              <div class="row gap">
+                <span class="service-icon">🏃</span>
+                <div>
+                  <h3 class="card-title">Estilo de Vida</h3>
+                  <p class="muted">Orientações para um estilo de vida mais saudável e equilibrado</p>
+                </div>
+              </div>
+              <div class="list">
+                <div class="item"><span class="check">✔</span> Mudanças de hábitos</div>
+                <div class="item"><span class="check">✔</span> Exercícios adequados</div>
+                <div class="item"><span class="check">✔</span> Bem-estar mental</div>
+              </div>
+              <div class="end"><a href="#agendar" class="btn btn-primary btn-sm">Agendar</a></div>
+            </div>
+
+            <div class="card">
+              <div class="row gap">
+                <span class="service-icon">🎥</span>
+                <div>
+                  <h3 class="card-title">Telemedicina</h3>
+                  <p class="muted">Consultas online seguras e convenientes</p>
+                </div>
+              </div>
+              <div class="list">
+                <div class="item"><span class="check">✔</span> Consulta por videoconferência</div>
+                <div class="item"><span class="check">✔</span> Acompanhamento remoto</div>
+                <div class="item"><span class="check">✔</span> Prescrições digitais</div>
+              </div>
+              <div class="end"><a href="#agendar" class="btn btn-primary btn-sm">Agendar</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="medicas" class="section">
+        <div class="container">
+          <div class="center mb">
+            <h2 class="title">Nossas Médicas</h2>
+            <p class="muted max">Conheça quem vai cuidar de você e da sua família com foco em cardiologia, prevenção e qualidade de vida.</p>
+          </div>
+          <div class="grid-2">
+            <article class="card overflow">
+              <div class="cover h-64"><img src="../frontend/src/assets/dr-rosangela.jpg" alt="Drª Rosângela"/></div>
+              <div class="card-body">
+                <h3 class="card-title">Drª Rosângela Campos</h3>
+                <p class="muted">Cardiologista e Clínica Médica com mais de 30 anos de experiência. Enfoque em prevenção familiar, acompanhamento de fatores de risco e cuidado humanizado.</p>
+                <div class="chips">
+                  <span>Hipertensão</span><span>Arritmias</span><span>Prevenção familiar</span><span>Check-up</span>
+                </div>
+                <div class="list tight">
+                  <div class="item"><span class="icon">🩺</span> Avaliação completa e plano preventivo</div>
+                  <div class="item"><span class="icon">🧪</span> Revisão de exames e ajuste terapêutico</div>
+                  <div class="item"><span class="icon">💻</span> Teleconsulta prática e acolhedora</div>
+                </div>
+                <div class="end"><a href="?medica=rosangela#agendar" class="btn btn-primary btn-sm">Agendar com Rosângela</a></div>
+              </div>
+            </article>
+            <article class="card overflow">
+              <div class="cover h-64"><img src="../frontend/src/assets/dr-antonina.jpg" alt="Drª Antonina"/></div>
+              <div class="card-body">
+                <h3 class="card-title">Drª Antonina Campos</h3>
+                <p class="muted">Formação em Cardiologia e atuação em prevenção, qualidade de vida e emagrecimento saudável. Acompanhamento contínuo e orientação prática.</p>
+                <div class="chips">
+                  <span>Prevenção</span><span>Emagrecimento</span><span>Estilo de vida</span><span>Sono e exercícios</span>
+                </div>
+                <div class="list tight">
+                  <div class="item"><span class="icon">🎯</span> Plano de metas e acompanhamento semanal</div>
+                  <div class="item"><span class="icon">💙</span> Educação em hábitos e prevenção cardiovascular</div>
+                  <div class="item"><span class="icon">💻</span> Teleconsulta acolhedora e objetiva</div>
+                </div>
+                <div class="end"><a href="?medica=antonina#agendar" class="btn btn-primary btn-sm">Agendar com Antonina</a></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider" aria-hidden>
+        <svg viewBox="0 0 1200 40" preserveAspectRatio="none">
+          <path id="dividerPathB" fill="none" stroke="rgba(254,205,211,.28)" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+          <path id="dividerPathB2" fill="none" stroke="#fecdd3" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+
+      <section id="agendar" class="section light">
+        <div class="container grid-2 gap">
+          <div>
+            <h2 class="title">Agende sua consulta</h2>
+            <p class="muted">Escolha a especialidade, a médica e o melhor horário para você.</p>
+            <div id="form-alert" class="alert hidden"></div>
+            <form id="form" class="form">
+              <div class="grid-2 gap">
+                <div class="field">
+                  <label>Especialidade</label>
+                  <select id="especialidade">
+                    <option>Cardiologia</option>
+                    <option>Clínica Médica</option>
+                    <option>Prevenção</option>
+                    <option>Emagrecimento</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label>Médica</label>
+                  <select id="medica"></select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label>Data e horário</label>
+                <div id="slots" class="slots"></div>
+              </div>
+
+              <div class="grid-2 gap">
+                <div class="field">
+                  <label>CPF</label>
+                  <input id="cpf" placeholder="Somente números" />
+                </div>
+                <div class="field">
+                  <label>Nome completo</label>
+                  <input id="nome" />
+                </div>
+              </div>
+
+              <div class="grid-3 gap">
+                <div class="field">
+                  <label>Data de nascimento</label>
+                  <input id="nascimento" type="date" />
+                </div>
+                <div class="field">
+                  <label>Sexo</label>
+                  <select id="sexo">
+                    <option>Feminino</option>
+                    <option>Masculino</option>
+                    <option>Outro</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label>Objetivo da consulta</label>
+                  <input id="objetivo" placeholder="Ex.: check-up, dor no peito, emagrecimento" />
+                </div>
+              </div>
+
+              <div class="pt">
+                <button class="btn btn-primary" type="submit">Confirmar agendamento</button>
+                <p class="hint">Dados protegidos. Você receberá e-mail com o link da teleconsulta.</p>
+              </div>
+            </form>
+          </div>
+
+          <aside class="glass card">
+            <h3 class="card-title">Nossas médicas</h3>
+            <ul class="doc-list">
+              <li class="doc">
+                <img src="../frontend/src/assets/dr-rosangela.jpg" alt="Drª Rosângela"/>
+                <div>
+                  <p class="doc-name">Drª Rosângela Campos</p>
+                  <p class="muted">Cardiologista e Clínica Médica, +30 anos de experiência. Foco em prevenção familiar e tratamento das doenças cardiovasculares.</p>
+                </div>
+              </li>
+              <li class="doc">
+                <img src="../frontend/src/assets/dr-antonina.jpg" alt="Drª Antonina"/>
+                <div>
+                  <p class="doc-name">Drª Antonina Campos</p>
+                  <p class="muted">Residente em Cardiologia. Qualidade de vida, estilo de vida saudável e prevenção. Estudos em emagrecimento e obesidade.</p>
+                </div>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section id="como-funciona" class="section">
+        <div class="container">
+          <div class="center mb">
+            <h2 class="title">Como funciona</h2>
+            <p class="muted">Consulta online simples e prática em quatro passos</p>
+          </div>
+          <div class="grid-4">
+            <div class="step"><div class="step-icon">💙</div><h3>Escolha sua especialidade</h3><p class="muted">Cardiologia, Clínica Médica, Prevenção ou Emagrecimento</p></div>
+            <div class="step"><div class="step-icon">👩‍⚕️</div><h3>Selecione a médica</h3><p class="muted">Drª Rosângela ou Drª Antonina</p></div>
+            <div class="step"><div class="step-icon">🗓️</div><h3>Defina data e horário</h3><p class="muted">Próximos horários disponíveis</p></div>
+            <div class="step"><div class="step-icon">💻</div><h3>Atendimento online</h3><p class="muted">Receba o link da consulta por e-mail</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="depoimentos" class="section">
+        <div class="container">
+          <div class="center mb">
+            <h2 class="title">Depoimentos</h2>
+            <p class="muted">Histórias reais de quem confia na nossa equipe</p>
+          </div>
+          <div class="grid-3">
+            <blockquote class="quote"><p>“Atendimento impecável e humanizado. A consulta online foi super prática e esclarecedora.”</p><footer>— Marina S.</footer></blockquote>
+            <blockquote class="quote"><p>“Consegui organizar meu check-up com facilidade. Recomendo a todos!”</p><footer>— Carlos P.</footer></blockquote>
+            <blockquote class="quote"><p>“As orientações de prevenção e estilo de vida melhoraram muito minha qualidade de vida.”</p><footer>— Bianca R.</footer></blockquote>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container row between center-v">
+        <div class="row center-v gap-sm">
+          <img src="../frontend/public/logo.svg" alt="Campos Cardiologia" class="logo"/>
+          <p class="muted">Cuidado completo para o seu coração.</p>
+        </div>
+        <p class="tiny">© <span id="year"></span> Campos Cardiologia. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <div class="whatsapp">
+      <a id="wa" href="#" target="_blank" rel="noopener" aria-label="WhatsApp" title="Falar no WhatsApp">WA</a>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+  </html>
+
+
