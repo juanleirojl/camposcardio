@@ -20,8 +20,10 @@ body {
 }
 
 .btn-primary {
-  @apply inline-flex items-center justify-center rounded-xl bg-brand-700 text-white px-6 py-3 font-medium shadow-card hover:bg-brand-800 transition-colors;
+  @apply inline-flex items-center justify-center rounded-xl text-white px-6 py-3 font-medium shadow-card transition-colors ring-1 ring-brand-600/20;
+  background-image: linear-gradient(90deg, theme('colors.brand.600'), theme('colors.brand.500'));
 }
+.btn-primary:hover { background-image: linear-gradient(90deg, theme('colors.brand.700'), theme('colors.brand.600')); }
 
 .btn-outline {
   @apply inline-flex items-center justify-center rounded-xl border border-brand-300 text-brand-800 px-6 py-3 font-medium hover:bg-brand-50 transition-colors;
@@ -37,6 +39,13 @@ body {
   background: radial-gradient(1200px 400px at 10% -10%, #a6d9ff 0%, rgba(255,255,255,0) 60%),
               radial-gradient(900px 300px at 90% 10%, #ffb3c1 0%, rgba(255,255,255,0) 55%);
 }
+
+/* Cards utilitários */
+.card-elevated { @apply bg-white rounded-2xl ring-1 ring-brand-100 shadow-card hover:shadow-xl transition-shadow; }
+.card-body { @apply p-6; }
+.card-header { @apply flex items-center gap-3; }
+.card-icon { @apply inline-flex items-center justify-center w-10 h-10 rounded-xl text-white shadow-md; background-image: linear-gradient(135deg, theme('colors.brand.600'), theme('colors.brand.500')); }
+.card-ribbon { @apply h-1; background-image: linear-gradient(90deg, theme('colors.brand.600'), theme('colors.brand.400')); }
 
 /* Floating WhatsApp */
 .floating-whatsapp { position: fixed; right: 18px; bottom: 18px; z-index: 60; }
