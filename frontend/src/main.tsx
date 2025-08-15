@@ -1,18 +1,27 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './styles.css'
-import LandingPage from './pages/LandingPage'
-import DashboardMedica from './pages/DashboardMedica'
+import Loader from './components/Loader'
+const LandingPage = React.lazy(() => import('./pages/LandingPage'))
+const DashboardMedica = React.lazy(() => import('./pages/DashboardMedica'))
 
 const router = createBrowserRouter([
   { path: '/', element: <LandingPage /> },
   { path: '/dashboard', element: <DashboardMedica /> },
 ])
 
+const DelayedFallback: React.FC<{ delay?: number }> = ({ delay = 200 }) => {
+  const [show, setShow] = React.useState(false)
+  React.useEffect(() => { const t = setTimeout(() => setShow(true), delay); return () => clearTimeout(t) }, [delay])
+  return show ? <Loader /> : null
+}
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Suspense fallback={<DelayedFallback />}>
+      <RouterProvider router={router} />
+    </Suspense>
   </React.StrictMode>,
 )
 
@@ -35,14 +44,6 @@ if (document.readyState === 'loading') {
   initAOS()
 }
 
-// Hide loader after mount
-window.addEventListener('load', () => {
-  const loader = document.getElementById('loader')
-  if (loader) {
-    loader.style.opacity = '0'
-    loader.style.transition = 'opacity .35s ease'
-    setTimeout(() => loader.remove(), 400)
-  }
-})
+// nothing here now: loader control is via Suspense fallback
 
 

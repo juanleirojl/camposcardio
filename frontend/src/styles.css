@@ -20,11 +20,11 @@ body {
 }
 
 .btn-primary {
-  @apply inline-flex items-center justify-center rounded-full bg-brand-700 text-white px-6 py-3 font-medium shadow-card hover:bg-brand-800 transition-colors;
+  @apply inline-flex items-center justify-center rounded-xl bg-brand-700 text-white px-6 py-3 font-medium shadow-card hover:bg-brand-800 transition-colors;
 }
 
 .btn-outline {
-  @apply inline-flex items-center justify-center rounded-full border border-brand-300 text-brand-800 px-6 py-3 font-medium hover:bg-brand-50 transition-colors;
+  @apply inline-flex items-center justify-center rounded-xl border border-brand-300 text-brand-800 px-6 py-3 font-medium hover:bg-brand-50 transition-colors;
 }
 
 .glass {
@@ -40,10 +40,10 @@ body {
 
 /* Loader */
 .loader { position: fixed; inset: 0; background: linear-gradient(180deg, #fff, #fff6f6); display: grid; place-items: center; z-index: 9999; }
-.loader-content { display: flex; flex-direction: column; align-items: center; gap: .75rem; }
-.logo-icon { display: grid; place-items: center; width: clamp(56px, 10vmin, 80px); height: clamp(56px, 10vmin, 80px); border-radius: 16px; animation: heartbeat 1.6s ease-in-out infinite; box-shadow: 0 10px 30px rgba(239,68,68,.25); transform-origin: center; }
-.loader-text { font-weight: 500; color: #991b1b; }
-.icon-heart { width: 72%; height: 72%; }
+.loader-content { display: flex; flex-direction: column; align-items: center; gap: .5rem; }
+.logo-icon { display: grid; place-items: center; width: clamp(56px, 7.5vmin, 72px); height: clamp(56px, 7.5vmin, 72px); border-radius: 16px; animation: heartbeat 1.6s ease-in-out infinite; box-shadow: 0 10px 30px rgba(239,68,68,.22); transform-origin: center; }
+.loader-text { font-weight: 500; color: #991b1b; font-size: .9rem; }
+.icon-heart { width: 70%; height: 70%; }
 
 @keyframes heartbeat {
   0%, 100% { transform: scale(1); }
