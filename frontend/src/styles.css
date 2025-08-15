@@ -38,6 +38,21 @@ body {
               radial-gradient(900px 300px at 90% 10%, #ffb3c1 0%, rgba(255,255,255,0) 55%);
 }
 
+/* Loader */
+.loader { position: fixed; inset: 0; background: linear-gradient(180deg, #fff, #fff6f6); display: grid; place-items: center; z-index: 9999; }
+.loader-content { display: flex; flex-direction: column; align-items: center; gap: .75rem; }
+.logo-icon { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 16px; animation: heartbeat 1.6s ease-in-out infinite; box-shadow: 0 10px 30px rgba(239,68,68,.25); }
+.loader-text { font-weight: 500; color: #991b1b; }
+.icon-heart { width: 64px; height: 64px; }
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  15% { transform: scale(1.06); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.06); }
+  60% { transform: scale(1); }
+}
+
 /* reveals */
 .reveal-start {
   opacity: 0;

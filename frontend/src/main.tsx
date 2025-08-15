@@ -35,4 +35,14 @@ if (document.readyState === 'loading') {
   initAOS()
 }
 
+// Hide loader after mount
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loader')
+  if (loader) {
+    loader.style.opacity = '0'
+    loader.style.transition = 'opacity .35s ease'
+    setTimeout(() => loader.remove(), 400)
+  }
+})
+
 
