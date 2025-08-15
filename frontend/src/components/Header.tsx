@@ -19,6 +19,7 @@ const Header: React.FC = () => {
         </a>
         <nav className="hidden md:flex items-center gap-6">
           <a href="#servicos" className="text-sm font-medium text-slate-700 hover:text-brand-800">Serviços</a>
+          <a href="#medicas" className="text-sm font-medium text-slate-700 hover:text-brand-800">Médicas</a>
           <a href="#como-funciona" className="text-sm font-medium text-slate-700 hover:text-brand-800">Como funciona</a>
           <a href="#depoimentos" className="text-sm font-medium text-slate-700 hover:text-brand-800">Depoimentos</a>
           <a href="#agendar" className="btn-outline">Agendar agora</a>

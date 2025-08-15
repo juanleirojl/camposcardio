@@ -1,4 +1,6 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
+import drRosangela from '../assets/dr-rosangela.jpg'
+import drAntonina from '../assets/dr-antonina.jpg'
 import { format } from 'date-fns'
 import { Agendamento, Especialidade, MEDICAS, SLOTS, salvarAgendamento, validarCPF } from '../services/agendamentos'
 
@@ -19,6 +21,14 @@ const AgendamentoForm: React.FC = () => {
   }, [especialidade])
 
   const slots = useMemo(() => SLOTS, [])
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const m = params.get('medica')
+    if (m === 'rosangela' || m === 'antonina') {
+      setMedicaId(m)
+    }
+  }, [])
 
   function onSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -142,14 +152,14 @@ const AgendamentoForm: React.FC = () => {
           <h3 className="text-xl font-semibold text-slate-900">Nossas médicas</h3>
           <ul className="mt-4 space-y-4">
             <li className="flex gap-4">
-              <img className="w-16 h-16 rounded-full object-cover" src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=300&auto=format&fit=crop" alt="Drª Rosângela" />
+              <img className="w-16 h-16 rounded-full object-cover" src={drRosangela} alt="Drª Rosângela" />
               <div>
                 <p className="font-medium text-slate-800">Drª Rosângela Campos</p>
                 <p className="text-sm text-slate-600">Cardiologista e Clínica Médica, +30 anos de experiência. Foco em prevenção familiar e tratamento das doenças cardiovasculares.</p>
               </div>
             </li>
             <li className="flex gap-4">
-              <img className="w-16 h-16 rounded-full object-cover" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=300&auto=format&fit=crop" alt="Drª Antonina" />
+              <img className="w-16 h-16 rounded-full object-cover" src={drAntonina} alt="Drª Antonina" />
               <div>
                 <p className="font-medium text-slate-800">Drª Antonina Campos</p>
                 <p className="text-sm text-slate-600">Residente em Cardiologia. Qualidade de vida, estilo de vida saudável e prevenção. Estudos em emagrecimento e obesidade.</p>

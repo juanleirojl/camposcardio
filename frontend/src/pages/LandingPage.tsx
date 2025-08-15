@@ -8,6 +8,7 @@ import Footer from '../components/Footer'
 import Reveal from '../components/Reveal'
 import SectionDivider from '../components/SectionDivider'
 import FloatingWhatsApp from '../components/FloatingWhatsApp'
+import Medicas from '../components/Medicas'
 
 const LandingPage: React.FC = () => {
   return (
@@ -27,84 +28,135 @@ const LandingPage: React.FC = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-7 items-stretch">
             <Reveal>
-            <div className="relative card-elevated h-full" data-aos="zoom-in">
-              <div className="absolute -top-3 -left-3 px-3 py-1 rounded-lg text-xs font-semibold text-white shadow-md" style={{backgroundImage:'linear-gradient(135deg,#be123c,#f43f5e)'}}>Mais procurado</div>
-              <div className="card-body">
-                <div className="card-header">
-                  <span className="card-icon">❤</span>
-                  <div>
-                    <h3 className="font-semibold text-xl text-slate-900">Cardiologia Clínica</h3>
-                    <p className="text-sm text-slate-500">Avaliação completa e acompanhamento de fatores de risco</p>
+              <div className="relative card-compact h-full" data-aos="zoom-in">
+                <div className="card-body-compact">
+                  <div className="flex items-start gap-3">
+                    <span className="service-icon">🫀</span>
+                    <div>
+                      <h3 className="font-semibold text-xl text-slate-900">Cardiologia Geral</h3>
+                      <p className="text-sm text-slate-500">Consultas e acompanhamento completo de doenças cardiovasculares</p>
+                    </div>
+                  </div>
+                  <div className="mt-4 check-list">
+                    <div className="check-item"><span className="check-icon">✔</span><span>Avaliação cardiovascular completa</span></div>
+                    <div className="check-item"><span className="check-icon">✔</span><span>Diagnóstico e tratamento</span></div>
+                    <div className="check-item"><span className="check-icon">✔</span><span>Acompanhamento preventivo</span></div>
+                  </div>
+                  <div className="mt-4 flex items-center justify-end">
+                    <a href="#agendar" className="btn-primary btn-primary--sm">Agendar</a>
                   </div>
                 </div>
-                <div className="card-ribbon mt-4"/>
-                <ul className="mt-4 text-sm text-slate-700 space-y-2">
-                  <li>• Check-up cardiovascular e estratificação de risco</li>
-                  <li>• Controle de hipertensão, arritmias e colesterol</li>
-                  <li>• Plano preventivo personalizado para sua rotina</li>
-                </ul>
-                <div className="mt-5 flex flex-wrap gap-2">
-                  <span className="px-2.5 py-1 rounded-md text-xs bg-brand-50 text-brand-700">Retorno em 30 dias</span>
-                  <span className="px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700">100% online</span>
-                  <span className="px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700">Particular</span>
-                </div>
-                <div className="mt-6 flex items-center justify-between">
-                  <div className="flex items-center text-amber-500 text-sm">★★★★★<span className="ml-2 text-slate-500">5.0</span></div>
-                  <a href="#agendar" className="btn-primary">Agendar</a>
-                </div>
               </div>
-            </div>
             </Reveal>
             <Reveal delayMs={100}>
-            <div className="relative card-elevated h-full" data-aos="zoom-in">
-              <div className="card-body">
-                <div className="card-header">
-                  <span className="card-icon">🩺</span>
-                  <div>
-                    <h3 className="font-semibold text-xl text-slate-900">Clínica Médica</h3>
-                    <p className="text-sm text-slate-500">Saúde integral, continuidade de cuidados e orientação</p>
+              <div className="relative card-compact h-full" data-aos="zoom-in">
+                <div className="card-body-compact">
+                  <div className="flex items-start gap-3">
+                    <span className="service-icon">🛡️</span>
+                    <div>
+                      <h3 className="font-semibold text-xl text-slate-900">Prevenção Cardiovascular</h3>
+                      <p className="text-sm text-slate-500">Foco na prevenção e detecção precoce de problemas cardíacos</p>
+                    </div>
+                  </div>
+                  <div className="mt-4 check-list">
+                    <div className="check-item"><span className="check-icon">✔</span><span>Check-up preventivo</span></div>
+                    <div className="check-item"><span className="check-icon">✔</span><span>Avaliação de fatores de risco</span></div>
+                    <div className="check-item"><span className="check-icon">✔</span><span>Orientações lifestyle</span></div>
+                  </div>
+                  <div className="mt-4 flex items-center justify-end">
+                    <a href="#agendar" className="btn-primary btn-primary--sm">Agendar</a>
                   </div>
                 </div>
-                <div className="card-ribbon mt-4"/>
-                <ul className="mt-4 text-sm text-slate-700 space-y-2">
-                  <li>• Atendimento do adulto e idoso</li>
-                  <li>• Revisão de exames e ajuste terapêutico</li>
-                  <li>• Teleconsulta humanizada e prática</li>
-                </ul>
-                <div className="mt-6 flex items-center justify-between">
-                  <div className="flex items-center text-amber-500 text-sm">★★★★★<span className="ml-2 text-slate-500">5.0</span></div>
-                  <a href="#agendar" className="btn-primary">Agendar</a>
-                </div>
               </div>
-            </div>
             </Reveal>
             <Reveal delayMs={200}>
-            <div className="relative card-elevated h-full" data-aos="zoom-in">
-              <div className="absolute -top-3 -right-3 px-3 py-1 rounded-lg text-xs font-semibold text-white shadow-md" style={{backgroundImage:'linear-gradient(135deg,#9f1239,#f43f5e)'}}>Novo</div>
-              <div className="card-body">
-                <div className="card-header">
-                  <span className="card-icon">🥗</span>
-                  <div>
-                    <h3 className="font-semibold text-xl text-slate-900">Estilo de Vida e Emagrecimento</h3>
-                    <p className="text-sm text-slate-500">Perda de peso saudável e prevenção cardiovascular</p>
+              <div className="relative card-compact h-full" data-aos="zoom-in">
+                <div className="card-body-compact">
+                  <div className="flex items-start gap-3">
+                    <span className="service-icon">👨‍👩‍👧‍👦</span>
+                    <div>
+                      <h3 className="font-semibold text-xl text-slate-900">Medicina Familiar</h3>
+                      <p className="text-sm text-slate-500">Cuidado integral para toda a família, de crianças a idosos</p>
+                    </div>
+                  </div>
+                  <div className="mt-4 check-list">
+                    <div className="check-item"><span className="check-icon">✔</span><span>Atendimento pediátrico</span></div>
+                    <div className="check-item"><span className="check-icon">✔</span><span>Cuidado do adulto</span></div>
+                    <div className="check-item"><span className="check-icon">✔</span><span>Geriatria preventiva</span></div>
+                  </div>
+                  <div className="mt-4 flex items-center justify-end">
+                    <a href="#agendar" className="btn-primary btn-primary--sm">Agendar</a>
                   </div>
                 </div>
-                <div className="card-ribbon mt-4"/>
-                <ul className="mt-4 text-sm text-slate-700 space-y-2">
-                  <li>• Plano de metas e acompanhamento semanal</li>
-                  <li>• Orientação de hábitos, sono e exercícios</li>
-                  <li>• Prevenção de doenças relacionadas à obesidade</li>
-                </ul>
-                <div className="mt-6 flex items-center justify-between">
-                  <div className="flex items-center text-amber-500 text-sm">★★★★★<span className="ml-2 text-slate-500">5.0</span></div>
-                  <a href="#agendar" className="btn-primary">Agendar</a>
+              </div>
+            </Reveal>
+            <Reveal>
+              <div className="relative card-compact h-full" data-aos="zoom-in">
+                <div className="card-body-compact">
+                  <div className="flex items-start gap-3">
+                    <span className="service-icon">🍎</span>
+                    <div>
+                      <h3 className="font-semibold text-xl text-slate-900">Controle de Peso</h3>
+                      <p className="text-sm text-slate-500">Programa especializado em emagrecimento e tratamento da obesidade</p>
+                    </div>
+                  </div>
+                  <div className="mt-4 check-list">
+                    <div className="check-item"><span className="check-icon">✔</span><span>Avaliação nutricional</span></div>
+                    <div className="check-item"><span className="check-icon">✔</span><span>Plano de emagrecimento</span></div>
+                    <div className="check-item"><span className="check-icon">✔</span><span>Acompanhamento contínuo</span></div>
+                  </div>
+                  <div className="mt-4 flex items-center justify-end">
+                    <a href="#agendar" className="btn-primary btn-primary--sm">Agendar</a>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Reveal>
+            <Reveal delayMs={100}>
+              <div className="relative card-compact h-full" data-aos="zoom-in">
+                <div className="card-body-compact">
+                  <div className="flex items-start gap-3">
+                    <span className="service-icon">🏃</span>
+                    <div>
+                      <h3 className="font-semibold text-xl text-slate-900">Estilo de Vida</h3>
+                      <p className="text-sm text-slate-500">Orientações para um estilo de vida mais saudável e equilibrado</p>
+                    </div>
+                  </div>
+                  <div className="mt-4 check-list">
+                    <div className="check-item"><span className="check-icon">✔</span><span>Mudanças de hábitos</span></div>
+                    <div className="check-item"><span className="check-icon">✔</span><span>Exercícios adequados</span></div>
+                    <div className="check-item"><span className="check-icon">✔</span><span>Bem-estar mental</span></div>
+                  </div>
+                  <div className="mt-4 flex items-center justify-end">
+                    <a href="#agendar" className="btn-primary btn-primary--sm">Agendar</a>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+            <Reveal delayMs={200}>
+              <div className="relative card-compact h-full" data-aos="zoom-in">
+                <div className="card-body-compact">
+                  <div className="flex items-start gap-3">
+                    <span className="service-icon">🎥</span>
+                    <div>
+                      <h3 className="font-semibold text-xl text-slate-900">Telemedicina</h3>
+                      <p className="text-sm text-slate-500">Consultas online seguras e convenientes</p>
+                    </div>
+                  </div>
+                  <div className="mt-4 check-list">
+                    <div className="check-item"><span className="check-icon">✔</span><span>Consulta por videoconferência</span></div>
+                    <div className="check-item"><span className="check-icon">✔</span><span>Acompanhamento remoto</span></div>
+                    <div className="check-item"><span className="check-icon">✔</span><span>Prescrições digitais</span></div>
+                  </div>
+                  <div className="mt-4 flex items-center justify-end">
+                    <a href="#agendar" className="btn-primary btn-primary--sm">Agendar</a>
+                  </div>
+                </div>
+              </div>
             </Reveal>
           </div>
           </div>
         </section>
+        <Medicas />
         <SectionDivider tint="dark" />
         <div className="bg-brand-700/5">
           <AgendamentoForm />

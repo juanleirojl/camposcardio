@@ -1,5 +1,7 @@
 import React from 'react'
 import ParticlesHearts from './ParticlesHearts'
+import drRosangela from '../assets/dr-rosangela.jpg'
+import drAntonina from '../assets/dr-antonina.jpg'
 
 const Hero: React.FC = () => {
   return (
@@ -37,10 +39,14 @@ const Hero: React.FC = () => {
           </div>
         </div>
         <div className="relative">
-          <div className="relative rounded-2xl overflow-hidden shadow-card ring-1 ring-slate-200">
-            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?q=80&w=1600&auto=format&fit=crop" alt="Médicas cardiologistas" className="w-full h-[420px] object-cover" />
-            <div className="absolute top-5 right-5 bg-white/80 rounded-full px-3 py-1 text-sm text-brand-800 shadow-card animate-float">
-              ❤ Campos Cardiologia
+          <div className="grid grid-cols-2 gap-4 items-stretch">
+            <div className="relative rounded-2xl overflow-hidden shadow-card ring-1 ring-slate-200 h-[420px]">
+              <img src={drRosangela} alt="Drª Rosângela" className="w-full h-full object-cover" />
+              <div className="absolute top-4 left-4 bg-white/85 rounded-full px-3 py-1 text-xs text-slate-800 shadow-card">Cardiologista</div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-card ring-1 ring-slate-200 h-[420px]">
+              <img src={drAntonina} alt="Drª Antonina" className="w-full h-full object-cover" />
+              <div className="absolute top-4 left-4 bg-white/85 rounded-full px-3 py-1 text-xs text-slate-800 shadow-card">Estilo de vida</div>
             </div>
           </div>
           <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-card p-4 ring-1 ring-slate-200">
