@@ -44,6 +44,19 @@ if (document.readyState === 'loading') {
   initAOS()
 }
 
-// nothing here now: loader control is via Suspense fallback
+// Loader inicial: sempre que atualizar a página
+const hideInitialLoader = () => {
+  const loader = document.getElementById('loader')
+  if (!loader) return
+  loader.style.transition = 'opacity .35s ease'
+  setTimeout(() => { loader.style.opacity = '0' }, 250)
+  setTimeout(() => loader.remove(), 700)
+}
+
+if (document.readyState === 'complete') {
+  hideInitialLoader()
+} else {
+  window.addEventListener('load', hideInitialLoader)
+}
 
 
