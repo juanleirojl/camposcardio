@@ -168,6 +168,17 @@ document.addEventListener("DOMContentLoaded", () => {
   initDividerPaths();
   initWhatsApp();
   initForm();
+  // AOS-like init
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove('aos-init');
+        entry.target.classList.add('aos-animate');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('[data-aos]').forEach((el) => { el.classList.add('aos-init'); observer.observe(el); });
 });
 
 

@@ -1,0 +1,15 @@
+{
+  "name": "camposcardio-site-basico",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "live-server --port=5500 --open=index.html --quiet",
+    "start": "live-server --port=5500 --open=index.html --quiet",
+    "build": "echo Static site - nothing to build"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
+
+
