@@ -6,7 +6,9 @@ type Props = {
 
 const SectionDivider: React.FC<Props> = ({ tint = 'light' }) => {
   const stroke = tint === 'light' ? '#fda4af' : '#fecdd3'
-  const glow = tint === 'light' ? 'rgba(244,63,94,0.12)' : 'rgba(254,205,211,0.12)'
+  const glow = tint === 'light' ? 'rgba(244,63,94,0.28)' : 'rgba(254,205,211,0.28)'
+  const glowWidth = 1.25
+  const strokeWidth = 0.5
 
   const d = useMemo(() => {
     const width = 1200
@@ -29,9 +31,9 @@ const SectionDivider: React.FC<Props> = ({ tint = 'light' }) => {
 
   return (
     <div className="w-full" aria-hidden>
-      <svg viewBox="0 0 1200 40" preserveAspectRatio="none" className="w-full h-10">
-        <path d={d} fill="none" stroke={glow} strokeWidth={6} strokeLinecap="round" strokeLinejoin="round" />
-        <path d={d} fill="none" stroke={stroke} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
+      <svg viewBox="0 0 1200 40" preserveAspectRatio="none" className="w-full h-6">
+        <path d={d} fill="none" stroke={glow} strokeWidth={glowWidth} strokeLinecap="round" strokeLinejoin="round" />
+        <path d={d} fill="none" stroke={stroke} strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     </div>
   )

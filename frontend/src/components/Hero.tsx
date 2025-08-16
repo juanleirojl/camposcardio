@@ -5,7 +5,7 @@ import drAntonina from '../assets/dr-antonina.jpg'
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative gradient-hero">
+    <section id="inicio" className="relative gradient-hero">
       <ParticlesHearts />
       <div className="container-max pt-16 pb-20 md:pt-24 md:pb-28 grid md:grid-cols-2 gap-10 items-center">
         <div>

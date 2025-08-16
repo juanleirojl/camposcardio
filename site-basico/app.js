@@ -23,6 +23,33 @@ function initDividerPaths() {
   });
 }
 
+/* Partículas de corações no Hero */
+function initHearts() {
+  const canvas = document.getElementById('hearts');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const DPR = Math.min(window.devicePixelRatio || 1, 2);
+  let stopped = false;
+  function resize(){
+    canvas.width = Math.max(1, Math.floor(canvas.clientWidth * DPR));
+    canvas.height = Math.max(1, Math.floor(canvas.clientHeight * DPR));
+  }
+  resize();
+  window.addEventListener('resize', resize);
+  const N = 28;
+  const parts = Array.from({length:N}).map(()=>({
+    x: Math.random(), y: Math.random(), s: 0.5 + Math.random()*1.2, a: Math.random()*Math.PI*2, v: 0.3 + Math.random()*0.6
+  }));
+  function drawHeart(x,y,size,alpha){
+    ctx.save(); ctx.globalAlpha = alpha; ctx.translate(x,y); ctx.scale(size,size); ctx.beginPath();
+    for(let t=0;t<Math.PI*2;t+=0.12){ const hx = 16*Math.pow(Math.sin(t),3); const hy = 13*Math.cos(t)-5*Math.cos(2*t)-2*Math.cos(3*t)-Math.cos(4*t); if(t===0) ctx.moveTo(hx,-hy); else ctx.lineTo(hx,-hy);} 
+    ctx.closePath(); ctx.fillStyle = 'rgba(244,63,94,0.12)'; ctx.fill(); ctx.restore();
+  }
+  function loop(){ if(stopped) return; requestAnimationFrame(loop); ctx.clearRect(0,0,canvas.width,canvas.height);
+    parts.forEach(p=>{ p.y -= 0.0005*p.s; p.x += Math.sin((performance.now()/1000)*p.v + p.a)*0.0003; if(p.y < -0.05){ p.y = 1.05; p.x = Math.random(); } drawHeart(p.x*canvas.width, p.y*canvas.height, p.s*0.6*DPR, 0.8); }); }
+  loop();
+}
+
 /* WhatsApp */
 function initWhatsApp(phone = "5511999999999", message = "Olá! Gostaria de agendar uma consulta.") {
   const a = document.getElementById("wa");
@@ -168,6 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initDividerPaths();
   initWhatsApp();
   initForm();
+  initHearts();
   // AOS-like init
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach((entry) => {

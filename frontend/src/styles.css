@@ -30,6 +30,20 @@ body {
   @apply inline-flex items-center justify-center rounded-xl border border-brand-300 text-brand-800 px-6 py-3 font-medium hover:bg-brand-50 transition-colors;
 }
 
+/* Nav underline hover */
+.nav-link { @apply relative text-sm font-medium text-slate-700 hover:text-brand-800; }
+.nav-link::after { content: ""; position: absolute; left: 0; bottom: -6px; width: 0; height: 2px; background: currentColor; transition: width .25s ease; }
+.nav-link:hover::after { width: 100%; }
+
+/* Service icon */
+.service-icon { @apply inline-flex items-center justify-center w-6 h-6 text-brand-700; }
+
+/* FAQ */
+.faq-item { @apply border border-slate-200 rounded-xl bg-white; }
+.faq-head { @apply w-full text-left p-4 flex items-center justify-between gap-3; }
+.faq-title { @apply font-medium text-slate-800; }
+.faq-body { @apply px-4 pb-4 text-slate-600; }
+
 .glass {
   background: rgba(255, 255, 255, 0.7);
   box-shadow: 0 10px 25px -10px rgba(18,63,116,0.15);

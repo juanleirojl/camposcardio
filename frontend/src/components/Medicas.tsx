@@ -5,9 +5,9 @@ import drAntonina from '../assets/dr-antonina.jpg'
 
 const Medicas: React.FC = () => {
   return (
-    <section id="medicas" className="container-max py-16">
+    <section id="equipe" className="container-max py-16">
       <div className="text-center">
-        <h2 className="text-3xl md:text-4xl font-semibold text-slate-900" style={{fontFamily:'Playfair Display, serif'}}>Nossas Médicas</h2>
+        <h2 className="text-3xl md:text-4xl font-semibold text-slate-900" style={{fontFamily:'Playfair Display, serif'}}>Nossa Equipe</h2>
         <p className="mt-2 text-slate-600 max-w-2xl mx-auto">Conheça quem vai cuidar de você e da sua família com foco em cardiologia, prevenção e qualidade de vida.</p>
       </div>
       <div className="mt-10 grid sm:grid-cols-2 gap-7">
